@@ -1,0 +1,8 @@
+# Cache del dataset SUSY (se regenera solo desde UCI en la primera corrida)
+data/
+
+__pycache__/
+*.pyc
+
+# Los CSV y figuras SI se versionan: son la evidencia del informe.
+# Si alguna corrida genera archivos pesados, excluirlos aqui explicitamente.

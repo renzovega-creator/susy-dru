@@ -1,0 +1,136 @@
+{
+  "preset": "medium",
+  "rows": 60000,
+  "cfg": {
+    "train": 2000,
+    "val": 1000,
+    "test": 4000,
+    "epochs": 15,
+    "seeds": [
+      101,
+      202,
+      303
+    ],
+    "boot": 2000
+  },
+  "grid": [
+    [
+      "A-fid",
+      "muten",
+      "fidelity",
+      "z",
+      "quantile",
+      5,
+      "f7"
+    ],
+    [
+      "A-infid",
+      "muten",
+      "infidelity",
+      "z",
+      "quantile",
+      5,
+      "f7"
+    ],
+    [
+      "A-cerezo",
+      "muten",
+      "cerezo",
+      "z",
+      "quantile",
+      5,
+      "f7"
+    ],
+    [
+      "A-bce",
+      "muten",
+      "bce",
+      "z",
+      "quantile",
+      5,
+      "f7"
+    ],
+    [
+      "A-mse",
+      "muten",
+      "mse",
+      "z",
+      "quantile",
+      5,
+      "f7"
+    ],
+    [
+      "A-hybrid",
+      "muten",
+      "hybrid",
+      "z",
+      "quantile",
+      5,
+      "f7"
+    ],
+    [
+      "B-bce-mm",
+      "muten",
+      "bce",
+      "z",
+      "minmax",
+      5,
+      "f7"
+    ],
+    [
+      "B-fid-mm",
+      "muten",
+      "fidelity",
+      "z",
+      "minmax",
+      5,
+      "f7"
+    ],
+    [
+      "C-xyz-bce",
+      "muten",
+      "bce",
+      "xyz",
+      "quantile",
+      5,
+      "f7"
+    ],
+    [
+      "C-ps-fid",
+      "perez_salinas",
+      "fidelity",
+      "z",
+      "quantile",
+      5,
+      "f9"
+    ],
+    [
+      "C-psw-fid",
+      "perez_salinas_w",
+      "fidelity",
+      "z",
+      "quantile",
+      5,
+      "f9"
+    ],
+    [
+      "D-ps-fid-mm",
+      "perez_salinas",
+      "fidelity",
+      "z",
+      "minmax",
+      5,
+      "f9"
+    ],
+    [
+      "D-psw-fid-mm",
+      "perez_salinas_w",
+      "fidelity",
+      "z",
+      "minmax",
+      5,
+      "f9"
+    ]
+  ],
+  "sha256": "f10ddc24857f874eacc37c3997db3450119032bb9c5a45cbcec29faf7eb721b6"
+}
