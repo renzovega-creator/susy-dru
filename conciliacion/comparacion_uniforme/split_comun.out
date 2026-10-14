@@ -1,0 +1,4 @@
+filas 0..25999  sha256=577a18dde5089914c350610b6f11e944690dd3a4609e4be6b9a8b2f448efe0fd
+train n=5000  señal=2500  índices 4-25999
+val   n=1000  señal=500  índices 47-25945
+test  n=5000  señal=2500  índices 9-25996

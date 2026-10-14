@@ -1,0 +1,8 @@
+# Generados a partir de los notebooks del equipo (que no están en el repo)
+run_four.py
+run_angello.py
+run_sebastian.py
+subs_unif_*.json
+# Directorios de trabajo y logs completos de cada corrida
+wd_*/
+logs/*.log

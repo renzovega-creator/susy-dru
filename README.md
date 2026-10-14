@@ -15,6 +15,9 @@ Asesor: Mg. Eduardo Massoni. Entrega final: 23/11/2026.
 
 ```
 susy-dru/
+├── conciliacion/
+│   └── comparacion_uniforme/   los 4 códigos del equipo sobre el split firmado (26 000 → 5000/1000/5000):
+│                               split común, scripts, scores y evaluación (DeLong + Holm). Ver su README.
 └── replica_dru/          simulador NumPy de n qubits con gradiente adjoint, entrenamiento layerwise,
     │                     grid de pérdidas x escalados, baselines clásicos y diagnóstico de barren plateaus
     ├── README.md         documentación del paquete (API, arquitecturas, pérdidas, resultados preliminares)

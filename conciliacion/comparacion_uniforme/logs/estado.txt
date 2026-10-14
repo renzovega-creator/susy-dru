@@ -1,0 +1,10 @@
+08:48:08 TANDA 1
+08:53:05 replica rc=0 297s
+09:03:14 four_202 rc=0 906s
+09:03:41 four_101 rc=0 933s
+09:04:02 four_303 rc=0 954s
+09:04:02 TANDA 2
+09:14:58 sebastian_explora rc=0 656s
+09:17:12 sebastian_receta rc=0 790s
+09:24:23 angello rc=0 1221s
+09:24:23 FIN

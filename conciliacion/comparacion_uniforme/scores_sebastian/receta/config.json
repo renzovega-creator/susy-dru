@@ -1,0 +1,18 @@
+{
+  "N_LAYERS": 5,
+  "FEATURE_IDS": [
+    0,
+    3,
+    6,
+    11,
+    15,
+    1
+  ],
+  "VAL_FRACTION": 0.2,
+  "LR": 0.05,
+  "BATCH": 128,
+  "EPOCHS_PER_LAYER": 10,
+  "FINAL_EPOCHS": 10,
+  "NORMALIZATION": null,
+  "ANGLE_HALF_RANGE": null
+}
