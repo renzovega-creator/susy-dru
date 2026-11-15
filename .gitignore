@@ -15,3 +15,7 @@ venv/
 .DS_Store
 Thumbs.db
 .vscode/
+
+# Salidas locales que no se versionan
+colab/salidas/
+corrida_final_rep/

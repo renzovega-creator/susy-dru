@@ -1,0 +1,69 @@
+A) Barrido en profundidad (n = 1 qubit)
+  n=1 local  L= 1 cerezo   Var_sonda=4.5819e-03  Var_media=1.7492e-03  E|g|=5.5393e-02
+  n=1 local  L= 1 fidelity Var_sonda=5.4631e-03  Var_media=2.1509e-03  E|g|=6.0566e-02
+  n=1 local  L= 1 bce      Var_sonda=1.5867e+00  Var_media=2.9562e-01  E|g|=4.2026e-01
+  n=1 local  L= 2 cerezo   Var_sonda=4.4586e-03  Var_media=1.7672e-03  E|g|=5.3001e-02
+  n=1 local  L= 2 fidelity Var_sonda=5.2132e-03  Var_media=2.0896e-03  E|g|=5.7590e-02
+  n=1 local  L= 2 bce      Var_sonda=2.1971e-01  Var_media=1.0269e-01  E|g|=3.3543e-01
+  n=1 local  L= 3 cerezo   Var_sonda=3.6034e-03  Var_media=1.8179e-03  E|g|=4.8438e-02
+  n=1 local  L= 3 fidelity Var_sonda=4.2777e-03  Var_media=2.1773e-03  E|g|=5.3007e-02
+  n=1 local  L= 3 bce      Var_sonda=2.0156e-01  Var_media=1.0261e-01  E|g|=3.1849e-01
+  n=1 local  L= 5 cerezo   Var_sonda=4.1808e-03  Var_media=1.8302e-03  E|g|=5.0827e-02
+  n=1 local  L= 5 fidelity Var_sonda=5.0192e-03  Var_media=2.1703e-03  E|g|=5.6196e-02
+  n=1 local  L= 5 bce      Var_sonda=2.3979e-01  Var_media=9.8427e-02  E|g|=3.4308e-01
+  n=1 local  L= 8 cerezo   Var_sonda=4.1888e-03  Var_media=1.8111e-03  E|g|=5.2526e-02
+  n=1 local  L= 8 fidelity Var_sonda=4.9453e-03  Var_media=2.1912e-03  E|g|=5.7439e-02
+  n=1 local  L= 8 bce      Var_sonda=2.3929e-01  Var_media=1.1298e-01  E|g|=3.3165e-01
+  n=1 local  L=12 cerezo   Var_sonda=4.3318e-03  Var_media=1.8338e-03  E|g|=5.3348e-02
+  n=1 local  L=12 fidelity Var_sonda=5.3736e-03  Var_media=2.2128e-03  E|g|=5.9289e-02
+  n=1 local  L=12 bce      Var_sonda=3.1295e-01  Var_media=1.1815e-01  E|g|=3.6631e-01
+  n=1 local  L=16 cerezo   Var_sonda=5.2340e-03  Var_media=1.8571e-03  E|g|=5.7920e-02
+  n=1 local  L=16 fidelity Var_sonda=5.9788e-03  Var_media=2.2402e-03  E|g|=6.1032e-02
+  n=1 local  L=16 bce      Var_sonda=2.7325e-01  Var_media=1.1432e-01  E|g|=3.4756e-01
+  n=1 local  L=24 cerezo   Var_sonda=4.3876e-03  Var_media=1.8492e-03  E|g|=5.2966e-02
+  n=1 local  L=24 fidelity Var_sonda=5.1569e-03  Var_media=2.2254e-03  E|g|=5.7805e-02
+  n=1 local  L=24 bce      Var_sonda=2.6165e-01  Var_media=1.2503e-01  E|g|=3.2637e-01
+
+B) Barrido en numero de qubits a profundidad fija: coste local vs global
+  n=1 local  L= 4 cerezo   Var_sonda=4.1940e-03  Var_media=1.8055e-03  E|g|=5.0862e-02
+  n=2 local  L= 4 cerezo   Var_sonda=1.8397e-03  Var_media=7.5600e-04  E|g|=3.3549e-02
+  n=2 global L= 4 cerezo   Var_sonda=1.4363e-03  Var_media=7.7216e-04  E|g|=3.0074e-02
+  n=3 local  L= 4 cerezo   Var_sonda=7.9902e-04  Var_media=4.2831e-04  E|g|=2.2775e-02
+  n=3 global L= 4 cerezo   Var_sonda=7.8264e-04  Var_media=3.8159e-04  E|g|=2.2618e-02
+  n=4 local  L= 4 cerezo   Var_sonda=4.3383e-04  Var_media=2.2532e-04  E|g|=1.6584e-02
+  n=4 global L= 4 cerezo   Var_sonda=4.1655e-04  Var_media=2.1086e-04  E|g|=1.5996e-02
+  n=5 local  L= 4 cerezo   Var_sonda=1.9958e-04  Var_media=1.1636e-04  E|g|=1.1130e-02
+  n=5 global L= 4 cerezo   Var_sonda=2.0722e-04  Var_media=9.7167e-05  E|g|=1.1457e-02
+  n=6 local  L= 4 cerezo   Var_sonda=1.0364e-04  Var_media=5.9120e-05  E|g|=8.0472e-03
+  n=6 global L= 4 cerezo   Var_sonda=9.4909e-05  Var_media=5.3041e-05  E|g|=7.7625e-03
+
+C) Interaccion profundidad x numero de qubits (cono de luz)
+   La garantia polinomica de Cerezo et al. para el coste LOCAL exige
+   profundidad O(log n): con L grande el cono de luz del observable
+   local ya cubre todos los qubits y la separacion desaparece.
+  n=2 local  L= 1 cerezo   Var_sonda=1.1878e-34  Var_media=8.7503e-04  E|g|=8.7628e-18
+  n=2 local  L= 2 cerezo   Var_sonda=2.3259e-03  Var_media=6.0659e-04  E|g|=3.8027e-02
+  n=2 local  L= 4 cerezo   Var_sonda=1.8397e-03  Var_media=7.5600e-04  E|g|=3.3549e-02
+  n=2 local  L= 8 cerezo   Var_sonda=1.8140e-03  Var_media=8.3241e-04  E|g|=3.3497e-02
+  n=2 global L= 1 cerezo   Var_sonda=4.6769e-03  Var_media=8.7973e-04  E|g|=5.4964e-02
+  n=2 global L= 2 cerezo   Var_sonda=8.9883e-04  Var_media=5.9599e-04  E|g|=2.3720e-02
+  n=2 global L= 4 cerezo   Var_sonda=1.4363e-03  Var_media=7.7216e-04  E|g|=3.0074e-02
+  n=2 global L= 8 cerezo   Var_sonda=1.7291e-03  Var_media=8.2055e-04  E|g|=3.2933e-02
+  n=4 local  L= 1 cerezo   Var_sonda=5.3101e-35  Var_media=1.5294e-04  E|g|=5.8182e-18
+  n=4 local  L= 2 cerezo   Var_sonda=5.3436e-04  Var_media=1.8758e-04  E|g|=1.8144e-02
+  n=4 local  L= 4 cerezo   Var_sonda=4.3383e-04  Var_media=2.2532e-04  E|g|=1.6584e-02
+  n=4 local  L= 8 cerezo   Var_sonda=4.3988e-04  Var_media=2.3843e-04  E|g|=1.6702e-02
+  n=4 global L= 1 cerezo   Var_sonda=1.5001e-03  Var_media=2.9170e-04  E|g|=3.1097e-02
+  n=4 global L= 2 cerezo   Var_sonda=3.6145e-04  Var_media=1.0522e-04  E|g|=1.5199e-02
+  n=4 global L= 4 cerezo   Var_sonda=4.1655e-04  Var_media=2.1086e-04  E|g|=1.5996e-02
+  n=4 global L= 8 cerezo   Var_sonda=4.0243e-04  Var_media=2.2846e-04  E|g|=1.6072e-02
+  n=6 local  L= 1 cerezo   Var_sonda=2.9346e-35  Var_media=1.9873e-05  E|g|=4.2668e-18
+  n=6 local  L= 2 cerezo   Var_sonda=1.4923e-04  Var_media=5.4753e-05  E|g|=9.7717e-03
+  n=6 local  L= 4 cerezo   Var_sonda=1.0364e-04  Var_media=5.9120e-05  E|g|=8.0472e-03
+  n=6 local  L= 8 cerezo   Var_sonda=9.6729e-05  Var_media=6.1977e-05  E|g|=7.7309e-03
+  n=6 global L= 1 cerezo   Var_sonda=5.4983e-04  Var_media=1.0153e-04  E|g|=1.8749e-02
+  n=6 global L= 2 cerezo   Var_sonda=4.9982e-05  Var_media=2.0529e-05  E|g|=5.6787e-03
+  n=6 global L= 4 cerezo   Var_sonda=9.4909e-05  Var_media=5.3041e-05  E|g|=7.7625e-03
+  n=6 global L= 8 cerezo   Var_sonda=9.6448e-05  Var_media=5.9422e-05  E|g|=7.7391e-03
+
+Salidas en /mnt/c/Users/renzo/OneDrive/Escritorio/Data_Mining/ProyectoSUSY_DRU_PUCP/conciliacion_codigos/corrida_final/barren_plateaus_500

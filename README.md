@@ -5,16 +5,19 @@ supersimétricas: comparación de funciones de pérdida y escalados para el pre-
 (Concurso de fortalecimiento de actividades de investigación — Ciencias 2026, FCI-PUCP).
 Asesor: Mg. Eduardo Massoni. Entrega final: 23/11/2026.
 
-> **Estado (13/10/2026): en conciliación. El pipeline todavía no está congelado.**
-> Este repositorio arranca con `replica_dru/` tal como quedó el 4/08/2026. Los resultados de `replica_dru/resultados/`
-> son preliminares y **no son la versión del informe**. El pipeline final se definirá tras comparar los códigos del
-> equipo sobre un mismo split; cuando esté listo, reemplazará o ampliará este contenido. El repositorio pasará a
-> público al cierre del proyecto, como compromete la propuesta firmada.
+> **Estado (15/11/2026): corrida final hecha (7/11/2026) e incluida en `corrida_final/`.** Es la que alimenta los
+> capítulos 3 y 4 del informe: diseño firmado M1–M4 y familias del objetivo 2, 5 semillas, test evaluado una sola vez.
+> Los resultados de `replica_dru/resultados/` (4/08/2026) son preliminares y **no son la versión del informe**.
+> El repositorio pasará a público al cierre del proyecto, como compromete la propuesta firmada.
 
 ## Estructura
 
 ```
 susy-dru/
+├── corrida_final/        corrida final del 7/11/2026: script, pre-registro (config JSON), resultados de test,
+│                         comparaciones DeLong + Holm, 115 corridas cuánticas en scores/, figuras. Ver su README.
+├── colab/                notebook de Google Colab: reproduce la corrida y trae el mismo circuito en PennyLane,
+│                         verificado contra el motor NumPy, listo para escalar datos, épocas o semillas
 ├── conciliacion/
 │   └── comparacion_uniforme/   los 4 códigos del equipo sobre el split firmado (26 000 → 5000/1000/5000):
 │                               split común, scripts, scores y evaluación (DeLong + Holm). Ver su README.
@@ -45,6 +48,15 @@ python run_grid.py --preset medium   # ~5 min en una laptop de 8 núcleos
 
 `test_vs_pennylane.py` necesita además PennyLane (probado con 0.42.3 y 0.45.1).
 Las rutas `C:\Users\...` que aparecen en `replica_dru/README.md` son del equipo donde se desarrolló; ignóralas.
+
+La corrida final usa el motor de `replica_dru/dru_core.py` con la receta de entrenamiento de `corrida_final/corrida_final.py`
+y las versiones de `corrida_final/requirements_corrida_final.txt`. Cómo reproducirla: `corrida_final/README.md`.
+
+### En Google Colab (PennyLane)
+
+Abrir `colab/SUSY_DRU_PennyLane_colab.ipynb` (*Archivo → Abrir cuaderno → GitHub*, con *Incluir repositorios privados*).
+Antes, guardar en los *Secrets* de Colab un token de GitHub de solo lectura para este repo con el nombre `GH_TOKEN`.
+El notebook explica cada paso; ver también `colab/README.md`.
 
 ## Datos
 

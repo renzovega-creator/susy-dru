@@ -1,0 +1,1242 @@
+{
+  "fecha": "2026-11-07 21:00:17",
+  "protocolo": "Corrida final SUSY_DRU: diseño firmado M1–M4 + familias del objetivo 2, evaluadas UNA vez en test.",
+  "semillas_modelo": [
+    101,
+    202,
+    303,
+    404,
+    505
+  ],
+  "split": {
+    "archivo": "conciliacion_codigos/uniforme/split_comun.npz",
+    "seed": 2021,
+    "tamaños": {
+      "train": 5000,
+      "val": 1000,
+      "test": 5000
+    },
+    "senal": {
+      "train": 2500,
+      "val": 500,
+      "test": 2500
+    }
+  },
+  "early_stopping": "four_models: la paciencia corta solo la fase en curso",
+  "configuraciones": {
+    "M1": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "minmax",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "xyz",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "1f0248370991"
+    },
+    "M2": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "xyz",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "69e93f3adf2f"
+    },
+    "M3-lin": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "infidelity",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "deda1e0abc4c"
+    },
+    "M4-lin": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "infidelity",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "9f4fcf5d59e1"
+    },
+    "M3-cua": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "fidelity",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "06520507efdc"
+    },
+    "M4-cua": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "fidelity",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "88f64474c98a"
+    },
+    "Z híbrida α=0.25": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "hybrid",
+      "hybrid_alpha": 0.25,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "b30989933694"
+    },
+    "Z híbrida α=0.5": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "hybrid",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "db766308b520"
+    },
+    "Z híbrida α=0.75": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "hybrid",
+      "hybrid_alpha": 0.75,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "b095286eefb7"
+    },
+    "Z BCE": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "3613404333cc"
+    },
+    "h=π/4 0.05·N": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 0.7853981633974483,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "xyz",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "c88bcc97988b"
+    },
+    "h=π/4 U[0,1)": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 0.7853981633974483,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "xyz",
+      "init": "uniform01",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "c0176e3c3a88"
+    },
+    "h=π/2 0.05·N": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 1.5707963267948966,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "xyz",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "8cae79f26c34"
+    },
+    "h=π/2 U[0,1)": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 1.5707963267948966,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "xyz",
+      "init": "uniform01",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "0100fae50f9a"
+    },
+    "h=π U[0,1)": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "xyz",
+      "init": "uniform01",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "51c624a37691"
+    },
+    "L=1": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 1,
+      "readout": "xyz",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "17862af15df7"
+    },
+    "L=2": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 2,
+      "readout": "xyz",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "9583fc92f5f7"
+    },
+    "L=3": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 3,
+      "readout": "xyz",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "d466ab2a5e4e"
+    },
+    "L=8": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 8,
+      "readout": "xyz",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "bce",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.05,
+      "stages": [
+        [
+          12,
+          0.02
+        ],
+        [
+          18,
+          0.01
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "2c5b4e689c80"
+    },
+    "M3-lin lr×0.5": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "infidelity",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.025,
+      "stages": [
+        [
+          12,
+          0.01
+        ],
+        [
+          18,
+          0.005
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "a284693f4223"
+    },
+    "M3-lin lr×2.0": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "infidelity",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.1,
+      "stages": [
+        [
+          12,
+          0.04
+        ],
+        [
+          18,
+          0.02
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "121b186e756d"
+    },
+    "M3-cua lr×0.5": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "fidelity",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.025,
+      "stages": [
+        [
+          12,
+          0.01
+        ],
+        [
+          18,
+          0.005
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "1f6079996339"
+    },
+    "M3-cua lr×2.0": {
+      "features": [
+        "lep1_pt",
+        "lep2_pt",
+        "met",
+        "m_tr_2",
+        "m_delta_r",
+        "lep1_eta",
+        "lep2_eta"
+      ],
+      "scaler": "quantile",
+      "angle_half_range": 3.141592653589793,
+      "split_protocol": "train_val_test",
+      "n_layers": 5,
+      "readout": "z",
+      "init": "normal",
+      "init_scale": 0.05,
+      "readout_init": [
+        0.0,
+        0.0,
+        1.0,
+        0.0
+      ],
+      "loss": "fidelity",
+      "hybrid_alpha": 0.5,
+      "l2": 0.0,
+      "l2_on_readout": false,
+      "batch_size": 128,
+      "layerwise_epochs": 1,
+      "layerwise_lr": 0.1,
+      "stages": [
+        [
+          12,
+          0.04
+        ],
+        [
+          18,
+          0.02
+        ]
+      ],
+      "adam_reset": "stage",
+      "patience": 7,
+      "patience_per_stage": true,
+      "min_delta": 0.0001,
+      "hp_key": "2b53956351fe"
+    }
+  },
+  "alias": {
+    "h=π 0.05·N": "M2",
+    "L=5": "M2",
+    "Z híbrida α=1": "M3-lin",
+    "Z híbrida α=0": "M3-cua",
+    "BCE-XYZ": "M2",
+    "M3-lin lr×1.0": "M3-lin",
+    "M3-cua lr×1.0": "M3-cua"
+  },
+  "familias": {
+    "F1 núcleo vs M2": [
+      [
+        "M1",
+        "M2"
+      ],
+      [
+        "M3-lin",
+        "M2"
+      ],
+      [
+        "M4-lin",
+        "M2"
+      ],
+      [
+        "M3-cua",
+        "M2"
+      ],
+      [
+        "M4-cua",
+        "M2"
+      ]
+    ],
+    "F1b fidelidad cuadrática vs lineal": [
+      [
+        "M3-cua",
+        "M3-lin"
+      ],
+      [
+        "M4-cua",
+        "M4-lin"
+      ]
+    ],
+    "F2 pérdidas vs lineal (lectura Z)": [
+      [
+        "Z híbrida α=0.75",
+        "M3-lin"
+      ],
+      [
+        "Z híbrida α=0.5",
+        "M3-lin"
+      ],
+      [
+        "Z híbrida α=0.25",
+        "M3-lin"
+      ],
+      [
+        "M3-cua",
+        "M3-lin"
+      ],
+      [
+        "Z BCE",
+        "M3-lin"
+      ],
+      [
+        "M2",
+        "M3-lin"
+      ]
+    ],
+    "F3 rango × init vs M2": [
+      [
+        "h=π/4 0.05·N",
+        "M2"
+      ],
+      [
+        "h=π/4 U[0,1)",
+        "M2"
+      ],
+      [
+        "h=π/2 0.05·N",
+        "M2"
+      ],
+      [
+        "h=π/2 U[0,1)",
+        "M2"
+      ],
+      [
+        "h=π U[0,1)",
+        "M2"
+      ]
+    ],
+    "F4 capas vs L=5": [
+      [
+        "L=1",
+        "M2"
+      ],
+      [
+        "L=2",
+        "M2"
+      ],
+      [
+        "L=3",
+        "M2"
+      ],
+      [
+        "L=8",
+        "M2"
+      ]
+    ],
+    "F5 pérdida × lr": [
+      [
+        "M3-lin lr×0.5",
+        "M3-lin"
+      ],
+      [
+        "M3-lin lr×2.0",
+        "M3-lin"
+      ],
+      [
+        "M3-cua lr×0.5",
+        "M3-cua"
+      ],
+      [
+        "M3-cua lr×2.0",
+        "M3-cua"
+      ]
+    ]
+  },
+  "familia_F6": "mejor cuántico por AUC de validación (entre M1, M2, M3-*, híbridas, Z BCE, rango×init, capas, pérdida×lr; M4 excluido porque no tiene validación) y M2 frente a cada clásico",
+  "clasicos": {
+    "LogReg": "C ∈ {0.01,0.1,1,10,100}",
+    "SVM_lineal": "C ∈ {0.01,0.1,1,10}",
+    "RF": "400 árboles, depth ∈ {6,8,12,None}, leaf ∈ {1,10}",
+    "MLP_73": "8 ocultas; alpha ∈ {1e-5,1e-4,1e-3} × lr ∈ {5e-4,1e-3,3e-3}; 5 semillas",
+    "seleccion": "mejor AUC de validación; ajuste final con train",
+    "escalado": "StandardScaler"
+  },
+  "estadistica": {
+    "ic": "bootstrap estratificado 2000, percentiles 2.5-97.5, seed 2026",
+    "comparacion": "DeLong (Sun y Xu) sobre el ensemble de test",
+    "multiples": "Holm por familia"
+  },
+  "sha256": {
+    "dru_core": "319b0e7e22efd9716d1765f7bd5ef852b4e5ba4db43d5930f95aad8983f917c0",
+    "split_comun": "a7f72d4a48faa9926cbfe7beba5caadf0b9bee601359a31e2980e9ff5bc61b3e",
+    "script": "1cff9a6bdd538dda0077333ed57c4130121510afae9d712013a69f525dbfbe91",
+    "csv_60000": "d4506f55fac8e13e98cb4d7ee8fdd30ea93e345414bd0698ad8d3167052fed69"
+  },
+  "versiones": {
+    "python": "3.12.3",
+    "plataforma": "Linux-6.18.33.2-microsoft-standard-WSL2-x86_64-with-glibc2.39",
+    "numpy": "2.5.3",
+    "pandas": "2.3.2",
+    "sklearn": "1.7.2",
+    "scipy": "1.18.1",
+    "joblib": "1.6.0"
+  }
+}
