@@ -1,0 +1,109 @@
+grupo,n_vars,perdida,eta,lote,semilla,auc_val,mejor_epoca,epocas,segundos
+7 variables · BCE,7,bce,0.01,128,101,0.8671679999999999,27,30,63.3
+7 variables · BCE,7,bce,0.01,128,202,0.8597159999999999,18,25,42.5
+7 variables · BCE,7,bce,0.01,128,303,0.8598560000000001,29,30,48.5
+7 variables · BCE,7,bce,0.005,64,101,0.86558,25,30,92.5
+7 variables · BCE,7,bce,0.005,64,202,0.859524,10,19,63.3
+7 variables · BCE,7,bce,0.005,64,303,0.864672,30,30,94.1
+7 variables · BCE,7,bce,0.005,128,101,0.8590599999999999,20,27,45.3
+7 variables · BCE,7,bce,0.005,128,202,0.8593240000000001,14,21,36.6
+7 variables · BCE,7,bce,0.005,128,303,0.859864,25,30,48.7
+7 variables · BCE,7,bce,0.01,64,101,0.8694440000000001,23,30,93.6
+7 variables · BCE,7,bce,0.01,64,202,0.868932,21,28,88.5
+7 variables · BCE,7,bce,0.01,64,303,0.8583399999999999,29,30,95.3
+7 variables · BCE,7,bce,0.02,64,101,0.854144,23,30,101.3
+7 variables · BCE,7,bce,0.02,64,202,0.853428,26,28,88.8
+7 variables · BCE,7,bce,0.02,64,303,0.860032,11,18,61.4
+7 variables · BCE,7,bce,0.02,128,101,0.8620239999999999,20,27,43.6
+7 variables · BCE,7,bce,0.02,128,202,0.8624240000000001,21,28,48.3
+7 variables · BCE,7,bce,0.02,128,303,0.863896,19,26,44.5
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.005,64,101,0.8363039999999999,12,19,64.5
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.005,64,202,0.8344159999999998,6,19,64.2
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.005,64,303,0.8415360000000001,3,17,67.5
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.005,128,101,0.8340239999999999,11,19,45.4
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.005,128,202,0.839912,5,19,40.9
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.005,128,303,0.8325359999999999,4,18,38.4
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.01,64,101,0.8392999999999998,2,16,62.3
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.01,64,202,0.8386119999999999,6,19,64.5
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.01,64,303,0.843124,8,19,64.1
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.01,128,101,0.845864,12,19,33.1
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.01,128,202,0.838836,4,18,32.2
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.01,128,303,0.8426640000000001,20,27,45.7
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.02,64,101,0.8386919999999999,12,19,64.9
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.02,64,202,0.837124,8,19,71.5
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.02,64,303,0.8411759999999999,4,18,86.1
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.02,128,101,0.8356439999999998,2,16,35.2
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.02,128,202,0.8411000000000001,20,27,50.8
+7 variables · infidelidad lineal,7,infidelidad_lineal,0.02,128,303,0.835716,18,25,45.7
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.005,64,101,0.861312,13,20,81.2
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.005,64,202,0.8680359999999999,30,30,95.0
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.005,64,303,0.863868,15,22,73.7
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.005,128,101,0.859716,17,24,41.3
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.005,128,202,0.8547520000000001,13,20,37.3
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.005,128,303,0.8620279999999999,18,25,42.4
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.01,64,101,0.863432,13,20,67.7
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.01,64,202,0.8600759999999998,27,30,98.7
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.01,64,303,0.8616960000000001,15,22,74.0
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.01,128,101,0.858128,14,21,42.4
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.01,128,202,0.8648759999999999,27,30,51.5
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.01,128,303,0.8641840000000001,13,20,35.4
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.02,64,101,0.864368,24,30,97.6
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.02,64,202,0.85324,14,21,70.4
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.02,64,303,0.852188,22,29,97.5
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.02,128,101,0.864828,25,30,49.3
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.02,128,202,0.8595440000000001,19,26,43.6
+7 variables · infidelidad cuadrática,7,infidelidad_cuadratica,0.02,128,303,0.86432,18,25,43.1
+8 variables · BCE,8,bce,0.005,64,101,0.8517680000000001,13,20,76.2
+8 variables · BCE,8,bce,0.005,64,202,0.850288,4,18,70.4
+8 variables · BCE,8,bce,0.005,64,303,0.8416199999999999,9,19,74.2
+8 variables · BCE,8,bce,0.005,128,101,0.8570800000000001,28,30,56.4
+8 variables · BCE,8,bce,0.005,128,202,0.846044,27,30,56.2
+8 variables · BCE,8,bce,0.005,128,303,0.8491279999999999,17,24,45.9
+8 variables · BCE,8,bce,0.01,64,101,0.850076,23,30,107.6
+8 variables · BCE,8,bce,0.01,64,202,0.8488159999999999,18,25,92.6
+8 variables · BCE,8,bce,0.01,64,303,0.8492879999999998,15,22,81.7
+8 variables · BCE,8,bce,0.01,128,101,0.856068,25,30,56.8
+8 variables · BCE,8,bce,0.01,128,202,0.8517999999999999,30,30,56.3
+8 variables · BCE,8,bce,0.01,128,303,0.8417480000000002,13,20,40.6
+8 variables · BCE,8,bce,0.02,64,101,0.84948,27,28,101.8
+8 variables · BCE,8,bce,0.02,64,202,0.8477600000000001,10,17,67.4
+8 variables · BCE,8,bce,0.02,64,303,0.838748,16,23,86.0
+8 variables · BCE,8,bce,0.02,128,101,0.8497880000000001,13,20,39.8
+8 variables · BCE,8,bce,0.02,128,202,0.8507959999999999,22,29,55.6
+8 variables · BCE,8,bce,0.02,128,303,0.8461879999999999,15,22,45.3
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.005,64,101,0.8343319999999999,12,19,68.8
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.005,64,202,0.8346200000000001,9,19,74.7
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.005,64,303,0.833888,4,18,68.1
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.005,128,101,0.833636,11,19,35.3
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.005,128,202,0.838012,5,19,37.7
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.005,128,303,0.828708,3,17,34.0
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.01,64,101,0.839572,16,23,80.2
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.01,64,202,0.8303919999999999,7,19,72.9
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.01,64,303,0.832944,10,19,71.6
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.01,128,101,0.831852,1,15,30.2
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.01,128,202,0.837836,25,30,54.0
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.01,128,303,0.8327920000000001,3,17,33.1
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.02,64,101,0.827192,10,19,66.7
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.02,64,202,0.830628,1,15,58.9
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.02,64,303,0.8293399999999999,12,19,68.4
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.02,128,101,0.8357199999999999,18,25,44.5
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.02,128,202,0.8293279999999998,14,21,40.1
+8 variables · infidelidad lineal,8,infidelidad_lineal,0.02,128,303,0.8342040000000001,24,28,50.3
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.005,64,101,0.8227319999999999,23,30,98.4
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.005,64,202,0.850336,18,25,88.9
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.005,64,303,0.855816,30,30,106.2
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.005,128,101,0.854932,14,21,38.8
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.005,128,202,0.8464039999999999,13,20,39.2
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.005,128,303,0.84942,20,27,48.8
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.01,64,101,0.851964,13,20,70.9
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.01,64,202,0.853804,27,30,103.5
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.01,64,303,0.8548,18,25,86.0
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.01,128,101,0.8519319999999999,24,27,47.2
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.01,128,202,0.851576,23,30,55.8
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.01,128,303,0.850824,22,29,51.2
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.02,64,101,0.62354,8,19,67.9
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.02,64,202,0.847096,22,29,100.0
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.02,64,303,0.8470920000000001,14,21,74.7
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.02,128,101,0.8089360000000001,23,30,51.5
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.02,128,202,0.839048,13,20,38.9
+8 variables · infidelidad cuadrática,8,infidelidad_cuadratica,0.02,128,303,0.8500560000000001,22,29,51.0

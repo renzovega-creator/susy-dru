@@ -1,0 +1,4 @@
+modelo,configuracion_corrida_final,archivo_puntajes,corrida_final_auc_ensemble,corrida_final_ic95
+1 qubit · L = 5 · infidelidad lineal (corrida final),M3-lin,deda1e0abc4c,0.83598336,"[0.8242, 0.8475]"
+1 qubit · L = 5 · infidelidad cuadrática (corrida final),M3-cua,06520507efdc,0.85352576,"[0.8432, 0.8637]"
+1 qubit · L = 5 · BCE (corrida final),Z BCE,3613404333cc,0.85432112,"[0.8434, 0.8646]"

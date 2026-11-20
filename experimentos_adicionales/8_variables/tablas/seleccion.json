@@ -1,0 +1,50 @@
+[
+  {
+    "grupo": "7 variables · BCE",
+    "n_vars": 7,
+    "perdida": "bce",
+    "eta": 0.01,
+    "lote": 64,
+    "auc_val_media": 0.8655719999999999
+  },
+  {
+    "grupo": "7 variables · infidelidad lineal",
+    "n_vars": 7,
+    "perdida": "infidelidad_lineal",
+    "eta": 0.01,
+    "lote": 128,
+    "auc_val_media": 0.8424546666666667
+  },
+  {
+    "grupo": "7 variables · infidelidad cuadrática",
+    "n_vars": 7,
+    "perdida": "infidelidad_cuadratica",
+    "eta": 0.005,
+    "lote": 64,
+    "auc_val_media": 0.8644053333333334
+  },
+  {
+    "grupo": "8 variables · BCE",
+    "n_vars": 8,
+    "perdida": "bce",
+    "eta": 0.005,
+    "lote": 128,
+    "auc_val_media": 0.8507506666666668
+  },
+  {
+    "grupo": "8 variables · infidelidad lineal",
+    "n_vars": 8,
+    "perdida": "infidelidad_lineal",
+    "eta": 0.01,
+    "lote": 64,
+    "auc_val_media": 0.8343026666666665
+  },
+  {
+    "grupo": "8 variables · infidelidad cuadrática",
+    "n_vars": 8,
+    "perdida": "infidelidad_cuadratica",
+    "eta": 0.01,
+    "lote": 64,
+    "auc_val_media": 0.8535226666666667
+  }
+]

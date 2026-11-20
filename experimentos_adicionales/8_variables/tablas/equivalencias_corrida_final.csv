@@ -1,0 +1,7 @@
+grupo,eta,lote,configuracion_corrida_final,corrida_final_auc_ensemble,corrida_final_ic95,corrida_final_auc_por_semilla
+7 variables · BCE,0.01,128,M2,0.8548532799999998,"[0.8443, 0.8654]",0.8483 ± 0.0034
+7 variables · infidelidad lineal,0.01,128,M3-lin,0.83598336,"[0.8242, 0.8475]",0.8321 ± 0.0017
+7 variables · infidelidad cuadrática,0.01,128,M3-cua,0.85352576,"[0.8432, 0.8637]",0.8494 ± 0.0025
+8 variables · BCE,0.01,128,— (nueva),,,
+8 variables · infidelidad lineal,0.01,128,— (nueva),,,
+8 variables · infidelidad cuadrática,0.01,128,— (nueva),,,
