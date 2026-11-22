@@ -65,14 +65,14 @@ filas = [("M1", r"M1 (MinMax, XYZ, BCE)"), ("M2", r"M2 (Quantile, XYZ, BCE)"),
          ("M3-cua", r"M3, fidelidad cuadrática"),
          ("M4-lin", r"M4, fidelidad lineal"),
          ("M4-cua", r"M4, fidelidad cuadrática")]
-clas = [("RF", "Bosque aleatorio"), ("MLP-73", "MLP-73"), ("LogReg", "Regresión logística"),
+clas = [("RF", r"\emph{Random forest}"), ("MLP-73", "MLP-73"), ("LogReg", "Regresión logística"),
         ("SVM lineal", "SVM lineal")]
 lines = [r"\begin{tabular}{@{}lccccc@{}}", r"\toprule",
          r"Modelo & Parám. & $\AUC$ & IC 95\,\% & Por semilla & $\Delta$ vs M2 ($p_\mathrm{Holm}$) \\",
          r"\midrule", r"\multicolumn{6}{@{}l}{\emph{Cuánticos (1 qubit, $L=5$, 5 semillas)}} \\"]
 for m, lab in filas:
     c = comp(m, "M2", "F1 núcleo")
-    d = "---" if c is None else f"{dfmt(c.delta_auc_ens)} ({pfmt(c.p_holm)})"
+    d = "(referencia)" if c is None else f"{dfmt(c.delta_auc_ens)} ({pfmt(c.p_holm)})"
     lines.append(f"{lab} & {int(R.loc[m].n_params)} & {f4(R.loc[m].test_auc_ens)} & {ic(m)} & {semillas(m)} & {d} \\\\")
 lines += [r"\midrule", r"\multicolumn{6}{@{}l}{\emph{Clásicos (ajuste de hiperparámetros con validación)}} \\"]
 for m, lab in clas:
@@ -92,7 +92,7 @@ lines = [r"\begin{tabular}{@{}lcccc@{}}", r"\toprule",
          r"\midrule"]
 for m, lab in perd:
     c = comp(m, "M3-lin", "F2")
-    d = "---" if c is None else f"{dfmt(c.delta_auc_ens)} ({pfmt(c.p_holm)})"
+    d = "(referencia)" if c is None else f"{dfmt(c.delta_auc_ens)} ({pfmt(c.p_holm)})"
     lines.append(f"{lab} & {f4(R.loc[m].test_auc_ens)} & {ic(m)} & {semillas(m)} & {d} \\\\")
 lines += [r"\bottomrule", r"\end{tabular}", ""]
 write("tab_perdidas.tex", "\n".join(lines), "resultados_test.csv y comparaciones_test.csv (familia F2)")
@@ -138,13 +138,13 @@ write("tab_bp.tex", "\n".join(lines), "barren_plateaus_500/barren_plateaus.csv (
 # ---------------------------------------------------------------- 6. tuning de los clásicos
 T = pd.read_csv(HERE / "clasicos_tuning_validacion.csv")
 best = T.loc[T.groupby("familia").val_auc.idxmax()]
-nombre = {"LogReg": "Regresión logística", "SVM lineal": "SVM lineal", "RF": "Bosque aleatorio", "MLP-73": "MLP-73"}
+nombre = {"LogReg": "Regresión logística", "SVM lineal": "SVM lineal", "RF": r"\emph{Random forest}", "MLP-73": "MLP-73"}
 grilla = {"LogReg": r"$C\in\{0.01, 0.1, 1, 10, 100\}$", "SVM lineal": r"$C\in\{0.01, 0.1, 1, 10\}$",
           "RF": r"400 árboles; profundidad $\in\{6, 8, 12, \text{sin límite}\}$; hoja mín. $\in\{1, 10\}$",
           "MLP-73": r"8 neuronas ocultas; $\alpha\in\{10^{-5}, 10^{-4}, 10^{-3}\}$; tasa $\in\{5\cdot10^{-4}, 10^{-3}, 3\cdot10^{-3}\}$"}
 import json  # noqa: E402
 lines = [r"\begin{tabular}{@{}l>{\raggedright\arraybackslash}p{0.47\linewidth}>{\raggedright\arraybackslash}p{0.25\linewidth}@{}}",
-         r"\toprule", r"Modelo & Grilla & Elegido (AUC de validación) \\", r"\midrule"]
+         r"\toprule", r"Modelo & \emph{Grid} & Elegido (AUC de validación) \\", r"\midrule"]
 for fam in ("LogReg", "SVM lineal", "RF", "MLP-73"):
     b = best[best.familia == fam].iloc[0]
     cfg = json.loads(b.config)
