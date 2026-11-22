@@ -51,7 +51,7 @@ def dots(ax, names, labels, val=True, horizontal=False):
 q = ["M1", "M2", "M3-lin", "M3-cua", "M4-lin", "M4-cua"]
 c = [m for m in ("RF", "MLP-73", "LogReg", "SVM lineal") if m in R.index]
 lab = {"M1": "M1 · MinMax + XYZ + BCE", "M2": "M2 · Quantile + XYZ + BCE",
-       "M3-lin": "M3 · pérdida lineal (Z)", "M3-cua": "M3 · pérdida cuadrática (Z)",
+       "M3-lin": "M3 · fidelidad lineal (Z)", "M3-cua": "M3 · fidelidad cuadrática (Z)",
        "M4-lin": "M4 · lineal, entren. + valid.", "M4-cua": "M4 · cuadrática, entren. + valid.",
        "RF": "Random forest (ajustado)", "MLP-73": "MLP-73 (ajustado)", "LogReg": "Regresión logística",
        "SVM lineal": "SVM lineal"}
