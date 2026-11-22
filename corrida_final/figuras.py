@@ -33,16 +33,16 @@ def dots(ax, names, labels, val=True, horizontal=False):
     pos = range(len(names))
     if horizontal:
         ax.errorbar(y, pos, xerr=e, fmt="o", ms=8, color=C_TEST, ecolor=C_TEST, elinewidth=2, capsize=0,
-                    label="test · ensemble de 5 semillas (IC 95 %)")
+                    label="prueba · ensemble de 5 semillas (IC 95 %)")
         if val:
-            ax.plot(R.loc[names].val_auc_ens, pos, "D", ms=7, mfc="white", mec=C_VAL, mew=2,
+            ax.plot(R.loc[names].val_auc_ens, pos, "D", ms=7, mfc="white", mec=INK2, mew=2,
                     label="validación · ensemble")
         ax.set_yticks(list(pos), labels); ax.invert_yaxis(); ax.grid(axis="y", visible=False)
     else:
         ax.errorbar(pos, y, yerr=e, fmt="o", ms=8, color=C_TEST, ecolor=C_TEST, elinewidth=2, capsize=0,
-                    label="test · ensemble de 5 semillas (IC 95 %)")
+                    label="prueba · ensemble de 5 semillas (IC 95 %)")
         if val:
-            ax.plot(pos, R.loc[names].val_auc_ens, "D", ms=7, mfc="white", mec=C_VAL, mew=2,
+            ax.plot(pos, R.loc[names].val_auc_ens, "D", ms=7, mfc="white", mec=INK2, mew=2,
                     label="validación · ensemble")
         ax.set_xticks(list(pos), labels); ax.grid(axis="x", visible=False)
 
@@ -51,9 +51,9 @@ def dots(ax, names, labels, val=True, horizontal=False):
 q = ["M1", "M2", "M3-lin", "M3-cua", "M4-lin", "M4-cua"]
 c = [m for m in ("RF", "MLP-73", "LogReg", "SVM lineal") if m in R.index]
 lab = {"M1": "M1 · MinMax + XYZ + BCE", "M2": "M2 · Quantile + XYZ + BCE",
-       "M3-lin": "M3 · fidelidad lineal (Z)", "M3-cua": "M3 · fidelidad cuadrática (Z)",
-       "M4-lin": "M4 · lineal, train+val", "M4-cua": "M4 · cuadrática, train+val",
-       "RF": "Random forest (tuning)", "MLP-73": "MLP-73 (tuning)", "LogReg": "Regresión logística",
+       "M3-lin": "M3 · pérdida lineal (Z)", "M3-cua": "M3 · pérdida cuadrática (Z)",
+       "M4-lin": "M4 · lineal, entren. + valid.", "M4-cua": "M4 · cuadrática, entren. + valid.",
+       "RF": "Random forest (ajustado)", "MLP-73": "MLP-73 (ajustado)", "LogReg": "Regresión logística",
        "SVM lineal": "SVM lineal"}
 fig, ax = plt.subplots(figsize=(7.2, 4.6))
 names = q + c
@@ -65,11 +65,11 @@ for i, (n, col) in enumerate(zip(names, cols)):
     ax.text(R.loc[n].ic95_hi + 0.0015, i, f"{y[n]:.4f}", va="center", fontsize=8.5, color=INK2)
 ax.set_yticks(range(len(names)), [lab[n] for n in names]); ax.invert_yaxis(); ax.grid(axis="y", visible=False)
 ax.axhline(len(q) - 0.5, color=INK2, lw=0.8, ls=":")
-ax.set_xlabel("AUC-ROC en test (ensemble; barras: IC 95 % bootstrap)")
+ax.set_xlabel("AUC de prueba (ensemble; barras: IC 95 % bootstrap)")
 ax.plot([], [], "o", color=C_TEST, label="cuántico (1 qubit, L = 5)")
 ax.plot([], [], "s", color=C_VAL, label="clásico")
 ax.legend(loc="upper left", fontsize=8.5)
-ax.set_title("Diseño firmado M1–M4 frente a los clásicos (split común, 5000 eventos de test)", fontsize=10,
+ax.set_title("Diseño firmado M1–M4 frente a los clásicos (5000 eventos de prueba)", fontsize=10,
              loc="left", color=INK)
 fig.savefig(FIG / "nucleo_y_clasicos.png", dpi=200); plt.close(fig)
 
@@ -81,7 +81,7 @@ fig, ax = plt.subplots(figsize=(7.6, 3.8))
 dots(ax, pn, pl)
 ax.axvline(5.5, color=INK2, lw=0.8, ls=":")
 ax.set_ylabel("AUC-ROC"); ax.legend(loc="lower right", fontsize=8.5)
-ax.set_title("Funciones de pérdida (Quantile, L = 5, receta de four_models)", fontsize=10, loc="left")
+ax.set_title("Funciones de pérdida (Quantile, L = 5)", fontsize=10, loc="left")
 fig.savefig(FIG / "perdidas.png", dpi=200); plt.close(fig)
 
 # 3 · rango angular × inicialización
@@ -92,10 +92,10 @@ for il, col, mk, dx in (("0.05·N", C_TEST, "o", -0.03), ("U[0,1)", C_3, "s", 0.
     y, e = err(names)
     xs = [i + dx for i in range(3)]
     ax.errorbar(xs, y, yerr=e, fmt=mk + "-", ms=8, lw=2, color=col, elinewidth=2, capsize=0,
-                label=f"init {'0.05·N(0,1)' if il == '0.05·N' else 'U[0,1)'}")
+                label=f"inicialización {'0.05·N(0,1)' if il == '0.05·N' else 'U[0,1)'}")
 ax.set_xticks(range(3), [f"h = {h}" for h, _ in hs]); ax.grid(axis="x", visible=False)
-ax.set_ylabel("AUC-ROC en test (IC 95 %)"); ax.legend(fontsize=8.5, loc="lower right")
-ax.set_title("Rango angular [−h, h] × inicialización (base M2)", fontsize=10, loc="left")
+ax.set_ylabel("AUC de prueba (IC 95 %)"); ax.legend(fontsize=8.5, loc="lower right")
+ax.set_title("Rango angular [−h, h] e inicialización (base M2)", fontsize=10, loc="left")
 fig.savefig(FIG / "rango_inicializacion.png", dpi=200); plt.close(fig)
 
 # 4 · capas
