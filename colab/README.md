@@ -3,7 +3,7 @@
 `SUSY_DRU_PennyLane_colab.ipynb` es el punto de partida para rehacer la corrida final con PennyLane y escalarla
 (más eventos, épocas o semillas) en Google Colab.
 
-1. Clona este repo privado con un token guardado en los *Secrets* de Colab (`GH_TOKEN`, solo lectura) e instala PennyLane.
+1. Clona este repo (público, sin token; con una copia privada usa el Secret `GH_TOKEN`) e instala PennyLane.
 2. Baja SUSY desde UCI y verifica que se regenera el split firmado (`conciliacion/comparacion_uniforme/split_comun.npz`).
 3. Reentrena M2 (semilla 101) con el motor NumPy de `corrida_final/` y lo compara con los puntajes guardados.
 4. Define el mismo circuito en PennyLane (`ModeloPL`, misma interfaz que `dru_core.DRUModel`) y verifica probabilidades,
@@ -19,5 +19,4 @@ del motor NumPy.
 El test oficial ya se usó una vez para la corrida pre-registrada: lo que se corra aquí es exploratorio y los
 hiperparámetros se eligen con validación.
 
-Para abrirlo: en Colab, *Archivo → Abrir cuaderno → GitHub*, marcar *Incluir repositorios privados* y buscar
-`renzovega-creator/susy-dru`. También se puede subir el `.ipynb` a mano.
+Para abrirlo: en Colab, *Archivo → Abrir cuaderno → GitHub* y buscar `renzovega-creator/susy-dru`. También se puede subir el `.ipynb` a mano.
