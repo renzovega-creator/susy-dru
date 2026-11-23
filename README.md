@@ -5,8 +5,8 @@ supersimétricas: comparación de funciones de pérdida y escalados para el pre-
 (Concurso de fortalecimiento de actividades de investigación, Ciencias 2026, Facultad de Ciencias e Ingeniería de la PUCP).
 Asesor: Mg. Eduardo Massoni.
 
-> **Estado (23/11/2026): proyecto cerrado.** `corrida_final/` es la corrida pre-registrada del 7/11/2026 que alimenta los
-> capítulos 3 y 4 del informe final, y `experimentos_adicionales/` contiene los dos experimentos exploratorios de su
+> **Estado (23/11/2026): proyecto cerrado.** El informe final está en `informe/SUSY_DRU_informe_final.pdf`.
+> `corrida_final/` es la corrida pre-registrada del 7/11/2026 que alimenta los capítulos 3 y 4 de ese informe, y `experimentos_adicionales/` contiene los dos experimentos exploratorios de su
 > sección 4.8. Los resultados de `replica_dru/resultados/` (4/08/2026) y de `conciliacion/` (14/10/2026) son etapas
 > anteriores y **no son los números del informe**.
 
@@ -49,6 +49,7 @@ Tablas completas: `corrida_final/resultados_test.csv` y `corrida_final/comparaci
 
 ```
 susy-dru/
+├── informe/                  informe final en PDF (60 páginas)
 ├── corrida_final/            corrida pre-registrada del 7/11/2026 (caps. 3 y 4 del informe): script, configuración
 │                             congelada, 115 corridas cuánticas en scores/, resultados, comparaciones y los scripts
 │                             que generan las figuras y tablas del informe. Ver su README.
