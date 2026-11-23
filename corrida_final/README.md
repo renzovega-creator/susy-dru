@@ -47,7 +47,7 @@ Para encontrar los puntajes de una configuración: `hp_key` está en `config_cor
 - **Estadística.** IC 95 % por bootstrap estratificado (2000 réplicas); DeLong (Sun y Xu) sobre el ensemble de test,
   con Holm dentro de cada familia definida de antemano. También media ± sd por semilla y Δ pareado por semilla.
 - **Entorno.** Python 3.12.3, NumPy 2.5.3, pandas 2.3.2, scikit-learn 1.7.2, SciPy 1.18.1 (WSL Ubuntu).
-  4–7 s por corrida cuántica; 839 s en total con 5 procesos.
+  Con 5 procesos en paralelo, cada corrida cuántica tardó entre 4.5 y 53 s (mediana 14 s), y la corrida completa 839 s.
 
 ## Resultados (test, 5000 eventos)
 
@@ -67,7 +67,7 @@ Para encontrar los puntajes de una configuración: `hp_key` está en `config_cor
 - M1 − M2 = −0.0009 (p = 0.65): con pesos entrenables el escalado no importa.
 - Fidelidad cuadrática − lineal: +0.0175 en M3 y +0.0206 en M4 (p < 1e-4). Con la cuadrática, M3/M4 empatan con BCE.
 - M2 − RF = −0.0010 (p = 1.0), M2 − MLP-73 = +0.0016 (p = 0.85): compatibles. M2 supera a LogReg y SVM (p < 1e-4).
-- **Ningún cuántico supera al RF ni al MLP-73.**
+- **Ningún cuántico supera de forma significativa al RF ni al MLP-73.**
 - Pérdidas con lectura Z: el AUC sube de forma monótona al bajar α en la híbrida (0.8360 con α = 1 → 0.8535 con α = 0).
 - Capas: 0.8055 (L = 1), 0.8446 (2), 0.8506 (3), 0.8549 (5), 0.8563 (8, p = 0.18 frente a L = 5).
 - Init U[0,1) con h = π: el ensemble aguanta (0.8544) pero las semillas son inestables (sd 0.073). Hay que reportar ambas cosas.
