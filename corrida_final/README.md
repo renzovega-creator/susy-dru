@@ -8,7 +8,9 @@ del informe.
 > `config_corrida_final.json` antes de entrenar. `corrida_final.py` se niega a correr si ya existe
 > `resultados_test.csv`. Todo lo que se elige (hiperparámetros de los clásicos, "mejor cuántico") se elige con validación.
 >
-> **Pendiente:** la auditoría independiente del motor (Angelo) no se hizo antes de lanzar esta corrida.
+> **Revisión del motor:** no hubo una auditoría independiente del código antes de lanzar esta corrida. Después, los
+> notebooks de `experimentos_adicionales/` reprodujeron con PennyLane, un simulador distinto del motor NumPy, las
+> puntuaciones de prueba de M3 con pérdida lineal y semilla 101 hasta 1e-11.
 
 ## Archivos
 
